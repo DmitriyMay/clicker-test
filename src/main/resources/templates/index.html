@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Clicker</title>
+    <script src="/js/jquery-3.4.0.min.js"></script>
+</head>
+<body>
+<div>
+    <input id="increment" type='button' value='Increment click'>
+    <p>Clicks: <a id="clicks" th:text="${clickNumber}">...</a></p>
+</div>
+</body>
+<script>
+	$("input[id=increment]").click(function () {
+		$.ajax({
+			method: "POST",
+			url: '/increment',
+			success: function (response) {
+				$("#clicks").text(response)
+			},
+			error: function (response) {
+				alert('Error: ' + response);
+			}
+		});
+	});
+</script>
+</html>
