@@ -71,8 +71,7 @@ Clicker
  - запустить приложение `400_start_back.sh` или `mvnw.cmd spring-boot:run` или `java -jar clicker-0.0.1-SNAPSHOT.jar`
  - остановить приложение `500_stop_back.sh` или `curl -X POST localhost:8080/actuator/shutdown`
 
-------
-Открыть в браузере `http://localhost:8080/`
-------
-Или выполнить в терминале  `curl -v http://localhost:8080/`, `curl -v -X POST http://localhost:8080/increment`
------
+
+#### Открыть в браузере `http://localhost:8080/`
+
+#### Или выполнить в терминале  `curl -v http://localhost:8080/`, `curl -v -X POST http://localhost:8080/increment`
